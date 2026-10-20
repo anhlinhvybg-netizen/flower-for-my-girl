@@ -3,27 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Chúc Mừng Ngày 20/10 - Dành Tặng Em Yêu 💖</title>
+  <title>Happy Vietnamese Women's Day 20/10 — To My Beloved 🌹</title>
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤍</text></svg>">
 
-  <!-- Google Fonts: Hỗ trợ tiếng Việt tuyệt đẹp -->
+  <!-- Google Fonts Hoàng Gia & Sang Trọng -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary-pink: #ff6584;
-      --deep-pink: #e0285a;
-      --soft-rose: #fff0f3;
-      --gold-accent: #fcd34d;
-      --gold-glow: rgba(252, 211, 77, 0.45);
-      --card-bg: rgba(255, 255, 255, 0.88);
-      --glass-border: rgba(255, 255, 255, 0.6);
-      --text-main: #372025;
-      --shadow-romantic: 0 20px 45px rgba(224, 40, 90, 0.18);
+      --bg-dark: #0d070b;
+      --bg-card: rgba(26, 15, 23, 0.75);
+      --bg-card-light: rgba(255, 255, 255, 0.04);
+      --gold-primary: #dfba73;
+      --gold-light: #fef0cd;
+      --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+      --gold-text-grad: linear-gradient(135deg, #fff2cc 0%, #dfba73 50%, #c59b4c 100%);
+      --rose-accent: #e27396;
+      --rose-dark: #67142b;
+      --text-gold: #f3e5c8;
+      --text-muted: #cbb3b9;
+      --border-gold: rgba(223, 186, 115, 0.35);
+      --border-gold-glow: rgba(223, 186, 115, 0.6);
+      --shadow-luxury: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(223, 186, 115, 0.12);
     }
 
     * {
@@ -36,13 +41,44 @@
     body {
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
-      background: radial-gradient(circle at 50% 20%, #ffe6eb 0%, #ffd1dc 45%, #f9bac8 75%, #f39cb0 100%);
-      color: var(--text-main);
+      background: radial-gradient(circle at 50% 15%, #220d1c 0%, #140811 50%, #090307 100%);
+      color: var(--text-gold);
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Canvas cánh hoa và hạt bụi tiên */
+    /* Ambient Lighting Orbs */
+    .ambient-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.35;
+      animation: float-ambient 12s ease-in-out infinite alternate;
+    }
+    .glow-1 {
+      top: -10%;
+      left: 20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #dfba73, transparent 70%);
+    }
+    .glow-2 {
+      bottom: 10%;
+      right: 15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #831843, transparent 70%);
+      animation-delay: -6s;
+    }
+
+    @keyframes float-ambient {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, 30px) scale(1.15); }
+    }
+
+    /* Canvas Hiệu Ứng Hoa & Bụi Vàng */
     #petals-canvas, #sparkles-canvas, #fireworks-canvas {
       position: fixed;
       top: 0;
@@ -50,67 +86,71 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 5;
+      z-index: 4;
     }
     #fireworks-canvas {
-      z-index: 30;
+      z-index: 35;
     }
 
-    /* Audio Toggle Button & Quick Controls */
+    /* Thanh Điều Khiển Trên Cùng (Luxury Bar) */
     .top-controls {
       position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 24px;
+      right: 24px;
       z-index: 50;
       display: flex;
-      gap: 12px;
+      gap: 14px;
     }
 
     .ctrl-btn {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      background: rgba(20, 10, 17, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(223, 186, 115, 0.15);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       outline: none;
     }
 
     .ctrl-btn:hover {
-      transform: scale(1.15) rotate(5deg);
-      background: #ffffff;
-      box-shadow: 0 8px 25px rgba(255, 101, 132, 0.4);
+      transform: scale(1.12);
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 20px rgba(223, 186, 115, 0.5);
+      color: #ffffff;
     }
 
     .ctrl-btn.playing {
-      animation: pulse-music 2s infinite;
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 25px rgba(223, 186, 115, 0.6);
+      animation: gold-pulse 2.5s infinite;
     }
 
-    @keyframes pulse-music {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 101, 132, 0.5); }
-      50% { box-shadow: 0 0 0 12px rgba(255, 101, 132, 0); }
+    @keyframes gold-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(223, 186, 115, 0.6); }
+      50% { box-shadow: 0 0 0 12px rgba(223, 186, 115, 0); }
     }
 
-    /* Màn hình mở quà (Intro Overlay) */
+    /* MÀN HÌNH MỞ QUÀ HOÀNG GIA (ROYAL WAX SEAL ENVELOPE) */
     .intro-screen {
       position: fixed;
       inset: 0;
-      z-index: 40;
-      background: radial-gradient(circle at center, rgba(255, 240, 243, 0.96) 0%, rgba(255, 198, 209, 0.98) 100%);
-      backdrop-filter: blur(12px);
+      z-index: 45;
+      background: radial-gradient(circle at center, rgba(30, 14, 25, 0.98) 0%, rgba(13, 7, 11, 0.99) 100%);
+      backdrop-filter: blur(25px);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+      padding: 24px;
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 1.2s;
     }
 
     .intro-screen.hidden {
@@ -119,54 +159,91 @@
       pointer-events: none;
     }
 
-    .intro-card {
-      text-align: center;
-      max-width: 480px;
+    .royal-envelope-wrapper {
+      position: relative;
+      max-width: 520px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.7);
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      padding: 40px 30px;
-      border-radius: 30px;
-      box-shadow: var(--shadow-romantic), 0 0 40px var(--gold-glow);
-      animation: float-gentle 4s ease-in-out infinite;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    @keyframes float-gentle {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    /* Thẻ phong thư sang trọng */
+    .royal-envelope {
+      position: relative;
+      width: 100%;
+      background: linear-gradient(145deg, #1f111b, #150912);
+      border: 1px solid var(--border-gold);
+      border-radius: 28px;
+      padding: 50px 36px 45px;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(223, 186, 115, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
     }
 
-    .intro-date-badge {
-      display: inline-block;
-      padding: 6px 18px;
+    .royal-envelope::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(223, 186, 115, 0.2);
       border-radius: 20px;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      color: white;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      pointer-events: none;
+    }
+
+    /* Họa tiết góc mạ vàng */
+    .corner-ornament {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border: 2px solid var(--gold-primary);
+      pointer-events: none;
+      opacity: 0.65;
+    }
+    .corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+    .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+    .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+    .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+    .royal-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 20px;
+      border-radius: 30px;
+      background: rgba(223, 186, 115, 0.1);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
-    .intro-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: #9f1239;
-      margin-bottom: 15px;
-      line-height: 1.3;
+    .royal-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      background: var(--gold-text-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+      line-height: 1.35;
+      letter-spacing: 1px;
     }
 
-    .intro-sub {
-      font-size: 1rem;
-      color: #6b3e49;
-      margin-bottom: 35px;
+    .royal-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
       line-height: 1.6;
     }
 
-    /* Hộp quà tương tác */
-    .gift-box-btn {
+    /* Con dấu sáp đỏ mạ vàng mở thư */
+    .wax-seal-btn {
       position: relative;
       background: none;
       border: none;
@@ -175,927 +252,990 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 16px;
       margin: 0 auto;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .gift-icon-wrapper {
+    .wax-seal-btn:hover {
+      transform: scale(1.06);
+    }
+
+    .wax-seal-badge {
       position: relative;
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, #ff4d6d, #c9184a);
-      border-radius: 26px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #9b1d3a, #540b1e);
+      border: 3px solid #dfba73;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 35px rgba(223, 186, 115, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3.5rem;
-      box-shadow: 0 15px 35px rgba(201, 24, 74, 0.45), 0 0 25px rgba(255, 209, 220, 0.6);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      animation: heartbeat-gift 2.2s infinite ease-in-out;
+      animation: heartbeat-luxury 3s ease-in-out infinite;
     }
 
-    /* Nơ trang trí hộp quà */
-    .gift-icon-wrapper::before {
-      content: '';
+    .seal-ribbon {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 22px;
-      background: linear-gradient(to bottom, #ffe699, #f59e0b);
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
-    }
-    .gift-icon-wrapper::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 22px;
-      background: linear-gradient(to right, #ffe699, #f59e0b);
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+      bottom: -22px;
+      width: 44px;
+      height: 36px;
+      background: #7a122a;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+      z-index: -1;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.5);
     }
 
-    .gift-bow {
-      position: absolute;
-      top: -15px;
-      font-size: 2.2rem;
-      z-index: 2;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+    .seal-emblem {
+      font-size: 2.4rem;
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
     }
 
-    .gift-btn-text {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #9f1239;
-      background: white;
+    .wax-seal-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.88rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(223, 186, 115, 0.12);
+      border: 1px solid var(--border-gold);
       padding: 8px 24px;
       border-radius: 20px;
-      box-shadow: 0 6px 18px rgba(159, 18, 57, 0.15);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
-    .gift-box-btn:hover .gift-icon-wrapper {
-      transform: scale(1.1) rotate(4deg);
-      box-shadow: 0 20px 45px rgba(201, 24, 74, 0.6), 0 0 35px rgba(252, 211, 77, 0.8);
+    .wax-seal-btn:hover .wax-seal-label {
+      background: rgba(223, 186, 115, 0.25);
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 20px rgba(223, 186, 115, 0.4);
     }
 
-    .gift-box-btn:hover .gift-btn-text {
-      transform: translateY(-2px);
-      background: #fff5f7;
-      color: var(--deep-pink);
+    @keyframes heartbeat-luxury {
+      0%, 100% { transform: scale(1); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(223, 186, 115, 0.3); }
+      50% { transform: scale(1.04); box-shadow: 0 16px 45px rgba(0, 0, 0, 0.8), 0 0 40px rgba(223, 186, 115, 0.55); }
     }
 
-    @keyframes heartbeat-gift {
-      0%, 100% { transform: scale(1); }
-      14% { transform: scale(1.08); }
-      28% { transform: scale(1); }
-      42% { transform: scale(1.05); }
-      70% { transform: scale(1); }
-    }
-
-    /* Main Container Sau Khi Mở */
+    /* GIAO DIỆN CHÍNH (MAIN LUXURY SHOWCASE) */
     .main-wrapper {
-      max-width: 1200px;
+      max-width: 1260px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 50px 24px 90px;
       position: relative;
       z-index: 10;
     }
 
-    /* Header Lãng Mạn */
-    .romantic-header {
+    /* Header Hoàng Gia */
+    .luxury-header {
       text-align: center;
-      margin-bottom: 45px;
-      padding-top: 15px;
+      margin-bottom: 50px;
     }
 
-    .header-badge {
-      display: inline-block;
-      padding: 6px 20px;
+    .header-gold-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 24px;
       border-radius: 30px;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(8px);
-      color: #be185d;
-      font-size: 0.95rem;
-      font-weight: 700;
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 4px 15px rgba(190, 24, 93, 0.12);
-      margin-bottom: 14px;
+      background: rgba(223, 186, 115, 0.08);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      margin-bottom: 18px;
     }
 
-    .romantic-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+    .luxury-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.3rem, 5.5vw, 4.2rem);
       font-weight: 800;
-      background: linear-gradient(135deg, #881337 0%, #be123c 40%, #e11d48 70%, #fb7185 100%);
+      background: var(--gold-text-grad);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
       line-height: 1.25;
-      letter-spacing: -0.5px;
-      text-shadow: 0 10px 30px rgba(225, 29, 72, 0.15);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-shadow: 0 10px 40px rgba(223, 186, 115, 0.2);
     }
 
-    .romantic-subtitle {
-      font-family: 'Dancing Script', cursive;
-      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
-      color: #9f1239;
-      font-weight: 700;
-      margin-top: 5px;
+    .luxury-sub-title {
+      font-family: 'Alex Brush', cursive;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      color: #f7d6a5;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 15px rgba(247, 214, 165, 0.4);
     }
 
-    /* Grid Nội Dung: Bó hoa + Bức thư */
+    /* Grid Trưng Bày Bó Hoa & Thư Chúc */
     .showcase-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 36px;
+      gap: 42px;
       align-items: stretch;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 960px) {
       .showcase-grid {
-        grid-template-columns: 1.05fr 1.15fr;
-        gap: 40px;
+        grid-template-columns: 1.1fr 1.15fr;
+        gap: 48px;
       }
     }
 
-    /* Card Bó Hoa Tươi Sống Động */
-    .flower-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(16px);
-      border: 2px solid var(--glass-border);
-      border-radius: 36px;
+    /* CARD BÓ HOA THƯỢNG LƯU (HAUTE FLORAL CARD) */
+    .flower-luxury-card {
+      background: linear-gradient(160deg, rgba(32, 17, 27, 0.85), rgba(18, 9, 15, 0.9));
+      border: 1px solid var(--border-gold);
+      border-radius: 32px;
       overflow: hidden;
-      box-shadow: var(--shadow-romantic), 0 0 50px rgba(255, 255, 255, 0.8);
+      box-shadow: var(--shadow-luxury);
+      position: relative;
       display: flex;
       flex-direction: column;
-      position: relative;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
     }
 
-    .flower-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 25px 55px rgba(224, 40, 90, 0.25), 0 0 45px var(--gold-glow);
+    .flower-luxury-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.8), 0 0 55px rgba(223, 186, 115, 0.25);
+      border-color: var(--gold-primary);
     }
 
-    .flower-img-container {
+    /* Khung ảnh hoa mạ vàng tinh xảo */
+    .flower-frame {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: 520px;
       overflow: hidden;
       background: #000;
     }
 
     @media (max-width: 600px) {
-      .flower-img-container {
-        height: 360px;
+      .flower-frame {
+        height: 380px;
       }
     }
 
-    .flower-img {
+    .flower-main-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
-      transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease;
-      filter: saturate(1.1) brightness(1.02);
+      transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      filter: saturate(1.08) brightness(1.02);
     }
 
-    .flower-card:hover .flower-img {
-      transform: scale(1.06);
+    .flower-luxury-card:hover .flower-main-img {
+      transform: scale(1.05);
     }
 
-    /* Lớp ánh sáng lung linh đè lên ảnh */
-    .img-vignette {
+    /* Lớp phủ điện ảnh & vignette */
+    .cinematic-overlay {
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.35) 100%),
-                  linear-gradient(to top, rgba(20, 10, 15, 0.7) 0%, transparent 40%);
+      background: radial-gradient(circle at 50% 45%, transparent 40%, rgba(13, 7, 11, 0.6) 100%),
+                  linear-gradient(to top, rgba(13, 7, 11, 0.95) 0%, transparent 45%);
       pointer-events: none;
     }
 
-    /* Shimmer effect trên ảnh hoa */
-    .shimmer-glow {
+    /* Hiệu ứng ánh vàng lướt qua ảnh */
+    .gold-shimmer {
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
       background: linear-gradient(
         45deg,
         rgba(255, 255, 255, 0) 40%,
-        rgba(255, 255, 255, 0.2) 50%,
+        rgba(252, 246, 186, 0.22) 50%,
         rgba(255, 255, 255, 0) 60%
       );
-      transform: rotate(30deg);
-      animation: sweep-glow 6s infinite ease-in-out;
+      transform: rotate(35deg);
+      animation: gold-sweep 7s infinite cubic-bezier(0.4, 0, 0.2, 1);
       pointer-events: none;
     }
 
-    @keyframes sweep-glow {
-      0% { transform: translateY(-100%) rotate(30deg); }
-      30%, 100% { transform: translateY(100%) rotate(30deg); }
+    @keyframes gold-sweep {
+      0% { transform: translateY(-100%) rotate(35deg); }
+      35%, 100% { transform: translateY(100%) rotate(35deg); }
     }
 
-    .flower-img-tag {
+    .frame-caption {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      color: white;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      bottom: 22px;
+      left: 24px;
+      right: 24px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      z-index: 2;
     }
 
-    .flower-tag-title {
-      font-size: 1.2rem;
+    .caption-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      color: #ffffff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .caption-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(223, 186, 115, 0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    .flower-card-details {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: linear-gradient(180deg, rgba(20, 10, 16, 0.95), rgba(15, 7, 12, 0.98));
+    }
+
+    /* Bộ chuyển đổi phong cách hoa cao cấp */
+    .flower-tabs {
+      display: flex;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 5px;
+      border-radius: 30px;
+      border: 1px solid rgba(223, 186, 115, 0.2);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 24px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .tab-btn.active {
+      background: var(--gold-gradient);
+      color: #2b1305;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(223, 186, 115, 0.4);
+    }
+
+    .quote-block {
+      border-left: 2px solid var(--gold-primary);
+      padding-left: 18px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text-gold);
+    }
+
+    .card-actions-bar {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    .luxury-btn {
+      flex: 1;
+      padding: 14px 24px;
+      background: var(--gold-gradient);
+      color: #2e1407;
+      border: none;
+      border-radius: 22px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 8px 25px rgba(223, 186, 115, 0.35);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .luxury-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(223, 186, 115, 0.55);
+      filter: brightness(1.08);
+    }
+
+    .luxury-btn:active {
+      transform: scale(0.97);
+    }
+
+    .heart-pill {
+      background: rgba(223, 186, 115, 0.1);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 12px 20px;
+      border-radius: 22px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* CARD BỨC THƯ QUÝ TỘC (ROYAL PARCHMENT LETTER) */
+    .letter-luxury-card {
+      background: linear-gradient(145deg, #1f121b, #150a12);
+      border: 1px solid var(--border-gold);
+      border-radius: 32px;
+      padding: 46px 40px;
+      box-shadow: var(--shadow-luxury);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .letter-luxury-card {
+        padding: 32px 24px;
+      }
+    }
+
+    .letter-luxury-card::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(223, 186, 115, 0.18);
+      border-radius: 24px;
+      pointer-events: none;
+    }
+
+    /* Con tem vàng quý tộc */
+    .gold-stamp {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      width: 76px;
+      height: 92px;
+      border: 1.5px dashed var(--gold-primary);
+      border-radius: 8px;
+      background: rgba(223, 186, 115, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(4deg);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      pointer-events: none;
+    }
+
+    .stamp-inner-text {
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .salutation-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .gold-editable-name {
+      color: #fff2cc;
+      border-bottom: 1.5px dashed var(--gold-primary);
+      padding: 0 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .gold-editable-name:hover {
+      background: rgba(223, 186, 115, 0.15);
+      border-radius: 4px;
+      text-shadow: 0 0 10px rgba(223, 186, 115, 0.6);
+    }
+
+    .letter-body-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 2.1;
+      color: #f7e9d7;
+      flex: 1;
+      margin-bottom: 35px;
+      white-space: pre-line;
+      letter-spacing: 0.3px;
+    }
+
+    .luxury-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.25em;
+      background: var(--gold-primary);
+      vertical-align: text-bottom;
+      margin-left: 4px;
+      box-shadow: 0 0 8px var(--gold-primary);
+      animation: gold-blink 0.8s infinite;
+    }
+
+    @keyframes gold-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .letter-closing {
+      margin-top: auto;
+      text-align: right;
+      border-top: 1px solid rgba(223, 186, 115, 0.2);
+      padding-top: 24px;
+    }
+
+    .closing-caption {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .closing-sign {
+      font-family: 'Alex Brush', cursive;
+      font-size: 2.6rem;
+      color: var(--gold-light);
+      text-shadow: 0 0 15px rgba(254, 240, 205, 0.4);
+    }
+
+    .bottom-letter-tools {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      justify-content: flex-end;
+    }
+
+    .outline-gold-btn {
+      background: rgba(223, 186, 115, 0.08);
+      border: 1px solid var(--border-gold);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      cursor: pointer;
+      transition: all 0.3s;
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
-    .flower-tag-badge {
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      padding: 4px 12px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    .flower-card-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,245,247,0.9) 100%);
-    }
-
-    .quote-box {
-      border-left: 3px solid var(--primary-pink);
-      padding-left: 14px;
-      font-style: italic;
-      color: #6a3644;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .interaction-bar {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-top: 5px;
-    }
-
-    .heart-blast-btn {
-      flex: 1;
-      padding: 13px 20px;
-      background: linear-gradient(135deg, #ff4b72, #e0285a);
-      color: white;
-      border: none;
-      border-radius: 18px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 8px 20px rgba(224, 40, 90, 0.35);
-      transition: all 0.3s ease;
-    }
-
-    .heart-blast-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(224, 40, 90, 0.5);
-      background: linear-gradient(135deg, #ff3360, #c71b48);
-    }
-
-    .heart-blast-btn:active {
-      transform: scale(0.97);
-    }
-
-    .heart-counter {
-      background: rgba(255, 101, 132, 0.12);
-      color: var(--deep-pink);
-      padding: 12px 18px;
-      border-radius: 18px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      white-space: nowrap;
-      border: 1px solid rgba(255, 101, 132, 0.25);
-    }
-
-    /* Bức Thư Chúc Mừng 20/10 */
-    .letter-card {
-      background: #fffdfa;
-      border: 2px solid rgba(255, 230, 200, 0.8);
-      border-radius: 36px;
-      padding: 42px 36px;
-      box-shadow: var(--shadow-romantic), inset 0 0 80px rgba(255, 240, 225, 0.5);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      background-image: 
-        radial-gradient(circle at top right, rgba(255, 182, 193, 0.2) 0%, transparent 60%),
-        radial-gradient(circle at bottom left, rgba(255, 218, 185, 0.25) 0%, transparent 60%);
-    }
-
-    @media (max-width: 600px) {
-      .letter-card {
-        padding: 30px 22px;
-      }
-    }
-
-    /* Con tem & hoa văn vintage */
-    .letter-stamp {
-      position: absolute;
-      top: 25px;
-      right: 25px;
-      width: 70px;
-      height: 85px;
-      border: 2px dashed #e57373;
-      border-radius: 6px;
-      background: #fff5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transform: rotate(5deg);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      pointer-events: none;
-    }
-
-    .stamp-heart {
-      font-size: 1.8rem;
-      margin-bottom: 2px;
-    }
-
-    .stamp-text {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: #c62828;
-      letter-spacing: 0.5px;
-    }
-
-    .letter-salutation {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: #9f1239;
-      margin-bottom: 22px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .editable-name {
-      color: #be123c;
-      border-bottom: 2px dashed #fda4af;
-      padding: 0 4px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .editable-name:hover {
-      background: #ffe4e6;
-      border-radius: 4px;
-    }
-
-    .letter-content {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.05rem;
-      line-height: 1.95;
-      color: #4a2c35;
-      flex: 1;
-      margin-bottom: 30px;
-      white-space: pre-line;
-      position: relative;
-    }
-
-    .typing-cursor {
-      display: inline-block;
-      width: 3px;
-      height: 1.2em;
-      background: #e11d48;
-      vertical-align: text-bottom;
-      margin-left: 3px;
-      animation: blink 0.8s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    .letter-signature {
-      margin-top: auto;
-      text-align: right;
-      border-top: 1px dashed rgba(224, 40, 90, 0.25);
-      padding-top: 20px;
-    }
-
-    .signature-label {
-      font-size: 0.85rem;
-      color: #834f5d;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 4px;
-    }
-
-    .signature-name {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #be123c;
-    }
-
-    /* Nút đổi lời chúc / cá nhân hóa */
-    .letter-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 15px;
-      justify-content: flex-end;
-    }
-
-    .mini-btn {
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid #fecdd3;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #9f1239;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .mini-btn:hover {
-      background: #ffe4e6;
-      border-color: #fb7185;
+    .outline-gold-btn:hover {
+      background: rgba(223, 186, 115, 0.2);
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 15px rgba(223, 186, 115, 0.3);
       transform: translateY(-1px);
     }
 
-    /* Carousel Những Điều Ngọt Ngào Dành Tặng Em */
-    .wishes-section {
-      margin-top: 60px;
+    /* NHỮNG ĐIỀU NGỌT NGÀO (LUXURY WISHES SECTION) */
+    .wishes-luxury-section {
+      margin-top: 75px;
       text-align: center;
     }
 
-    .wishes-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      color: #881337;
-      margin-bottom: 25px;
+    .wishes-gold-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.1rem;
+      background: var(--gold-text-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 35px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 14px;
     }
 
-    .cards-carousel {
+    .wishes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 26px;
     }
 
-    .wish-box {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.9);
+    .luxury-wish-card {
+      background: linear-gradient(160deg, rgba(30, 16, 26, 0.7), rgba(16, 8, 14, 0.85));
+      border: 1px solid var(--border-gold);
       border-radius: 24px;
-      padding: 28px 22px;
-      box-shadow: 0 10px 25px rgba(224, 40, 90, 0.08);
+      padding: 32px 26px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
       text-align: left;
       position: relative;
-      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      overflow: hidden;
+      gap: 14px;
     }
 
-    .wish-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 6px;
-      height: 100%;
-      background: linear-gradient(to bottom, #ff758c, #ff7eb3);
-      border-radius: 6px 0 0 6px;
+    .luxury-wish-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(223, 186, 115, 0.2);
     }
 
-    .wish-box:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 16px 35px rgba(224, 40, 90, 0.18);
-      background: #ffffff;
-    }
-
-    .wish-icon {
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
+    .wish-icon-gold {
+      width: 52px;
+      height: 52px;
       border-radius: 16px;
-      background: #fff0f3;
+      background: rgba(223, 186, 115, 0.12);
+      border: 1px solid var(--border-gold);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(255, 101, 132, 0.15);
+      font-size: 1.8rem;
+      box-shadow: inset 0 0 12px rgba(223, 186, 115, 0.2);
     }
 
-    .wish-box-title {
+    .wish-heading {
+      font-family: 'Cinzel', serif;
       font-size: 1.15rem;
       font-weight: 700;
-      color: #9f1239;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
     }
 
-    .wish-box-desc {
+    .wish-text {
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.95rem;
-      line-height: 1.6;
-      color: #5c353f;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text-muted);
     }
 
-    /* Modal Chỉnh Sửa Lời Chúc */
-    .edit-modal {
+    /* MODAL TÙY CHỈNH LỜI CHÚC (GOLDEN MODAL) */
+    .luxury-modal {
       position: fixed;
       inset: 0;
       z-index: 60;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
+      background: rgba(8, 3, 7, 0.75);
+      backdrop-filter: blur(14px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s;
+      transition: all 0.35s ease;
     }
 
-    .edit-modal.active {
+    .luxury-modal.active {
       opacity: 1;
       visibility: visible;
     }
 
-    .modal-dialog {
-      background: #ffffff;
+    .modal-box {
+      background: linear-gradient(150deg, #22121e, #130810);
+      border: 1px solid var(--gold-primary);
       border-radius: 28px;
-      max-width: 500px;
+      max-width: 520px;
       width: 100%;
-      padding: 30px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-      transform: scale(0.9);
-      transition: transform 0.3s;
+      padding: 36px 30px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(223, 186, 115, 0.3);
+      transform: scale(0.92);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .edit-modal.active .modal-dialog {
+    .luxury-modal.active .modal-box {
       transform: scale(1);
     }
 
-    .modal-title {
-      font-family: 'Playfair Display', serif;
+    .modal-head {
+      font-family: 'Cinzel', serif;
       font-size: 1.5rem;
-      color: #9f1239;
-      margin-bottom: 18px;
+      color: var(--gold-light);
+      margin-bottom: 22px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .form-group {
+    .field-label {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .gold-input, .gold-textarea {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 14px;
+      background: rgba(10, 4, 8, 0.6);
+      border: 1px solid var(--border-gold);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s;
       margin-bottom: 18px;
     }
 
-    .form-label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #6b3e49;
-      margin-bottom: 6px;
+    .gold-input:focus, .gold-textarea:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 15px rgba(223, 186, 115, 0.35);
     }
 
-    .form-input, .form-textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1.5px solid #fecdd3;
-      font-family: inherit;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .form-input:focus, .form-textarea:focus {
-      border-color: #e11d48;
-      box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
-    }
-
-    .form-textarea {
+    .gold-textarea {
       min-height: 140px;
       resize: vertical;
+      line-height: 1.6;
     }
 
-    .modal-actions {
+    .modal-btn-row {
       display: flex;
       justify-content: flex-end;
       gap: 12px;
-      margin-top: 24px;
+      margin-top: 10px;
     }
 
-    .btn-cancel {
-      padding: 10px 20px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-      background: #f8fafc;
-      font-weight: 600;
+    .btn-dark-cancel {
+      padding: 11px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: transparent;
+      color: var(--text-muted);
       cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
     }
 
-    .btn-save {
-      padding: 10px 24px;
-      border-radius: 14px;
+    .btn-gold-save {
+      padding: 11px 26px;
+      border-radius: 16px;
       border: none;
-      background: linear-gradient(135deg, #ff4b72, #e0285a);
-      color: white;
+      background: var(--gold-gradient);
+      color: #2b1305;
+      font-family: 'Cinzel', serif;
       font-weight: 700;
+      letter-spacing: 1px;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(224, 40, 90, 0.3);
+      box-shadow: 0 6px 20px rgba(223, 186, 115, 0.4);
     }
 
-    /* Footer Nhẹ Nhàng */
-    .romantic-footer {
+    /* Footer Hoàng Gia */
+    .luxury-footer {
       text-align: center;
-      margin-top: 70px;
-      padding: 20px;
-      color: #8c5765;
-      font-size: 0.9rem;
+      margin-top: 80px;
+      padding: 25px;
+      color: #92757e;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
     }
 
-    .footer-heart {
-      color: #e11d48;
+    .gold-heart-icon {
+      color: var(--gold-primary);
       display: inline-block;
-      animation: heartbeat 1.5s infinite;
+      animation: heartbeat-gold 2s infinite;
     }
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
+    @keyframes heartbeat-gold {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px var(--gold-primary)); }
+      50% { transform: scale(1.3); filter: drop-shadow(0 0 8px var(--gold-primary)); }
     }
 
-    /* Floating Love Hearts on Click */
-    .click-heart {
+    /* Hiệu ứng nhấp chuột trái tim phát sáng */
+    .sparkle-heart {
       position: fixed;
       pointer-events: none;
       z-index: 100;
-      font-size: 1.5rem;
-      animation: float-heart-up 1.6s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
+      font-size: 1.6rem;
+      animation: float-sparkle-up 1.8s forwards cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    @keyframes float-heart-up {
+    @keyframes float-sparkle-up {
       0% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+        filter: drop-shadow(0 0 10px rgba(223, 186, 115, 0.9));
       }
       50% {
-        opacity: 0.9;
-        transform: translate(calc(-50% + var(--rand-x)), calc(-50% - 80px)) scale(1.4) rotate(var(--rand-rot));
+        opacity: 0.95;
+        transform: translate(calc(-50% + var(--rand-x)), calc(-50% - 90px)) scale(1.3) rotate(var(--rand-rot));
       }
       100% {
         opacity: 0;
-        transform: translate(calc(-50% + var(--rand-x) * 1.5), calc(-50% - 180px)) scale(1) rotate(calc(var(--rand-rot) * 2));
+        transform: translate(calc(-50% + var(--rand-x) * 1.6), calc(-50% - 200px)) scale(0.9) rotate(calc(var(--rand-rot) * 2));
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Các lớp Canvas hiệu ứng cánh hoa, lấp lánh và pháo hoa -->
+  <!-- Quầng sáng ấm áp Ambient Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Các lớp Canvas hiệu ứng cánh hoa, bụi vàng và pháo hoa -->
   <canvas id="petals-canvas"></canvas>
   <canvas id="sparkles-canvas"></canvas>
   <canvas id="fireworks-canvas"></canvas>
 
-  <!-- Nút điều khiển âm thanh & toàn màn hình -->
+  <!-- Thanh điều khiển trên cùng -->
   <div class="top-controls">
-    <button class="ctrl-btn" id="audio-toggle-btn" title="Bật/Tắt nhạc tình ca" aria-label="Bật/Tắt nhạc">
+    <button class="ctrl-btn" id="audio-toggle-btn" title="Giai điệu lãng mạn" aria-label="Bật/Tắt nhạc">
       🎵
     </button>
-    <button class="ctrl-btn" id="fullscreen-btn" title="Chế độ xem toàn màn hình" aria-label="Toàn màn hình">
+    <button class="ctrl-btn" id="fullscreen-btn" title="Toàn màn hình" aria-label="Toàn màn hình">
       ⛶
     </button>
   </div>
 
-  <!-- MÀN HÌNH CHÀO: Hộp quà tình yêu -->
+  <!-- MÀN HÌNH CHÀO: Bức thư niêm phong sáp đỏ mạ vàng hoàng gia -->
   <div class="intro-screen" id="intro-screen">
-    <div class="intro-card">
-      <div class="intro-date-badge">🌹 20 Tháng 10 🌹</div>
-      <h1 class="intro-title">Món Quà Dành Tặng Em</h1>
-      <p class="intro-sub">
-        Gửi đến người con gái dịu dàng, xinh đẹp và tuyệt vời nhất của anh. Hãy nhấn vào hộp quà để mở điều bất ngờ nhé! 💖
-      </p>
+    <div class="royal-envelope-wrapper">
+      <div class="royal-envelope">
+        <!-- Họa tiết mạ vàng 4 góc -->
+        <div class="corner-ornament corner-tl"></div>
+        <div class="corner-ornament corner-tr"></div>
+        <div class="corner-ornament corner-bl"></div>
+        <div class="corner-ornament corner-br"></div>
 
-      <button class="gift-box-btn" id="open-gift-btn">
-        <div class="gift-icon-wrapper">
-          <div class="gift-bow">🎀</div>
-          <span>🎁</span>
-        </div>
-        <div class="gift-btn-text">
-          <span>Chạm để mở quà</span> ✨
-        </div>
-      </button>
+        <div class="royal-tag">✦ 20 . 10 . VIETNAMESE WOMEN'S DAY ✦</div>
+        <h1 class="royal-title">A Gift For My Queen</h1>
+        <p class="royal-subtitle">
+          Dành trọn sự trân quý và yêu thương đến người con gái tuyệt mỹ nhất của anh.
+        </p>
+
+        <button class="wax-seal-btn" id="open-gift-btn">
+          <div class="wax-seal-badge">
+            <span class="seal-emblem">🤍</span>
+            <div class="seal-ribbon"></div>
+          </div>
+          <div class="wax-seal-label">
+            <span>Chạm Để Mở Món Quà</span> ✨
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- NỘI DUNG CHÍNH (Hiện ra sau khi mở quà) -->
+  <!-- GIAO DIỆN CHÍNH (Hiện ra sau khi mở thư) -->
   <main class="main-wrapper" id="main-content">
     
-    <!-- Tiêu đề lãng mạn -->
-    <header class="romantic-header">
-      <div class="header-badge">✨ Ngày Phụ Nữ Việt Nam 20/10 ✨</div>
-      <h1 class="romantic-title">Happy Vietnamese Women's Day</h1>
-      <div class="romantic-subtitle">Gửi tặng bông hoa rực rỡ nhất trong lòng anh 🌹</div>
+    <!-- Tiêu đề hoàng gia -->
+    <header class="luxury-header">
+      <div class="header-gold-pill">✦ Happy Vietnamese Women's Day ✦</div>
+      <h1 class="luxury-main-title">Elegance & Devotion</h1>
+      <div class="luxury-sub-title">Bông hoa thuần khiết và kiêu sa nhất trong lòng anh</div>
     </header>
 
-    <!-- Grid: Bó hoa tươi sống động & Thư chúc mừng -->
+    <!-- Grid: Bó hoa thượng lưu & Bức thư tình -->
     <section class="showcase-grid">
 
-      <!-- CỘT 1: Bó hoa tươi sống động ngập tràn hoa trắng -->
-      <article class="flower-card">
-        <div class="flower-img-container" id="flower-card-3d">
-          <img src="white_bouquet.jpg" alt="Bình hoa trắng tinh khôi mừng 20/10" class="flower-img" id="flower-img" loading="eager">
-          <div class="img-vignette"></div>
-          <div class="shimmer-glow"></div>
+      <!-- CỘT 1: Bó hoa trắng tinh khôi & kiêu sa -->
+      <article class="flower-luxury-card">
+        <div class="flower-frame" id="flower-card-3d">
+          <img src="white_bouquet.jpg" alt="Bình hoa trắng tinh khôi mừng 20/10" class="flower-main-img" id="flower-img" loading="eager">
+          <div class="cinematic-overlay"></div>
+          <div class="gold-shimmer"></div>
           
-          <div class="flower-img-tag">
-            <div class="flower-tag-title">
+          <div class="frame-caption">
+            <div class="caption-title">
               <span id="flower-title-text">Bình Hoa Trắng Tinh Khôi</span> 🤍
             </div>
-            <div class="flower-tag-badge" id="flower-badge-text">Thuần Khiết & Dịu Dàng ✨</div>
+            <div class="caption-badge" id="flower-badge-text">Haute Couture Floral</div>
           </div>
         </div>
 
-        <div class="flower-card-body">
-          <!-- Bộ chuyển đổi phong cách hoa -->
-          <div class="flower-theme-switcher" style="display: flex; gap: 8px; justify-content: center; margin-bottom: 4px;">
-            <button class="mini-btn active" id="btn-theme-white" style="background: #ffffff; border: 1.5px solid #e2e8f0; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <div class="flower-card-details">
+          <!-- Thanh chọn hoa cao cấp -->
+          <div class="flower-tabs">
+            <button class="tab-btn active" id="btn-theme-white">
               🤍 Hoa Trắng Tinh Khôi
             </button>
-            <button class="mini-btn" id="btn-theme-rose" style="background: #fff0f3; border: 1px solid #fecdd3;">
+            <button class="tab-btn" id="btn-theme-rose">
               🌹 Hoa Hồng Rực Rỡ
             </button>
           </div>
 
-          <p class="quote-box" id="flower-quote-text">
-            "Có ngàn vạn đóa hoa khoe sắc ngoài kia, nhưng với anh, em tựa như những đóa hoa trắng tinh khôi nhất — dịu dàng, thanh khiết và rạng ngời trong trái tim anh."
+          <p class="quote-block" id="flower-quote-text">
+            "Giữa ngàn vạn đóa hoa khoe sắc ngoài kia, em tựa như những đóa hoa trắng tinh khôi nhất — kiêu sa, thuần khiết và thắp sáng cả thế giới của anh."
           </p>
 
-          <div class="interaction-bar">
-            <button class="heart-blast-btn" id="heart-blast-btn">
-              <span>💖 Thả tim tặng em</span>
+          <div class="card-actions-bar">
+            <button class="luxury-btn" id="heart-blast-btn">
+              <span>✦ Thả Tim Yêu Thương ✦</span>
             </button>
-            <div class="heart-counter" id="heart-counter">
-              <span>❤️</span> <span id="heart-count">999</span> tim
+            <div class="heart-pill" id="heart-counter">
+              <span>🤍</span> <span id="heart-count">999</span> tim
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CỘT 2: Bức thư chúc mừng -->
-      <article class="letter-card">
-        <div class="letter-stamp">
-          <div class="stamp-heart">💌</div>
-          <div class="stamp-text">LOVE 20.10</div>
+      <!-- CỘT 2: Bức thư viết tay quý tộc -->
+      <article class="letter-luxury-card">
+        <!-- Họa tiết mạ vàng 4 góc của thư -->
+        <div class="corner-ornament corner-tl"></div>
+        <div class="corner-ornament corner-tr"></div>
+        <div class="corner-ornament corner-bl"></div>
+        <div class="corner-ornament corner-br"></div>
+
+        <div class="gold-stamp">
+          <span style="font-size: 1.6rem;">💌</span>
+          <div class="stamp-inner-text">20.10</div>
         </div>
 
-        <div class="letter-salutation">
-          <span>Gửi:</span>
-          <span class="editable-name" id="display-recipient-name" title="Bấm vào để đổi tên bạn gái">Em Yêu 💖</span>
+        <div class="salutation-line">
+          <span>Kính gửi:</span>
+          <span class="gold-editable-name" id="display-recipient-name" title="Bấm vào để đổi tên bạn gái">Em Yêu 💖</span>
         </div>
 
-        <div class="letter-content" id="letter-content">
-          <!-- Chữ sẽ được gõ bằng hiệu ứng Typewriter -->
+        <div class="letter-body-text" id="letter-content">
+          <!-- Chữ gõ từng ký tự với typewriter -->
         </div>
 
-        <div class="letter-signature">
-          <div class="signature-label">Mãi yêu & chở che cho em,</div>
-          <div class="signature-name" id="display-sender-name">Anh của em ❤️</div>
+        <div class="letter-closing">
+          <div class="closing-caption">Yêu thương và trân trọng em vô bờ bến,</div>
+          <div class="closing-sign" id="display-sender-name">Anh của em ❤️</div>
         </div>
 
-        <div class="letter-actions">
-          <button class="mini-btn" id="replay-typewriter-btn" title="Gõ lại từng chữ lời chúc">
-            <span>✍️ Gõ lại thư</span>
+        <div class="bottom-letter-tools">
+          <button class="outline-gold-btn" id="replay-typewriter-btn" title="Gõ lại từng nét thư">
+            <span>✍️ Đọc Lại Thư</span>
           </button>
-          <button class="mini-btn" id="edit-letter-btn" title="Thay đổi tên và lời chúc">
-            <span>✏️ Tùy chỉnh lời chúc</span>
+          <button class="outline-gold-btn" id="edit-letter-btn" title="Chỉnh sửa tên và lời chúc">
+            <span>✏️ Tùy Chỉnh Lời Chúc</span>
           </button>
         </div>
       </article>
 
     </section>
 
-    <!-- PHẦN 2: Những lời chúc ngọt ngào (Wishes & Cards) -->
-    <section class="wishes-section">
-      <h2 class="wishes-title">
-        <span>Gửi Đến Em Vạn Điều Ngọt Ngào</span> 🌸
+    <!-- PHẦN 2: Những điều ngọt ngào & trân quý -->
+    <section class="wishes-luxury-section">
+      <h2 class="wishes-gold-title">
+        <span>✦ Vạn Lời Chúc Tinh Tú Dành Cho Em ✦</span>
       </h2>
 
-      <div class="cards-carousel">
-        <div class="wish-box">
-          <div class="wish-icon">☀️</div>
-          <div class="wish-box-title">Luôn Rạng Rỡ & Yêu Đời</div>
-          <p class="wish-box-desc">
-            Chúc em mỗi ngày thức dậy đều có nụ cười trên môi, mọi muộn phiền tan biến, chỉ còn lại sự an nhiên và niềm vui bất tận.
+      <div class="wishes-grid">
+        <div class="luxury-wish-card">
+          <div class="wish-icon-gold">☀️</div>
+          <div class="wish-heading">Rạng Ngời & Hạnh Phúc</div>
+          <p class="wish-text">
+            Chúc cho nụ cười của em luôn rực rỡ như ánh bình minh, mọi âu lo đều tan biến để lại những tháng ngày an yên và dịu ngọt nhất.
           </p>
         </div>
 
-        <div class="wish-box">
-          <div class="wish-icon">✨</div>
-          <div class="wish-box-title">Xinh Đẹp & Tự Tin</div>
-          <p class="wish-box-desc">
-            Em trong mắt anh lúc nào cũng là cô gái đáng yêu và quyến rũ nhất. Hãy luôn tự tin theo đuổi mọi ước mơ của mình nhé!
+        <div class="luxury-wish-card">
+          <div class="wish-icon-gold">💎</div>
+          <div class="wish-heading">Kiêu Sa & Toả Sáng</div>
+          <p class="wish-text">
+            Em luôn là viên ngọc quý giá và độc nhất. Hãy luôn tự tin, kiêu hãnh và rực sáng trên con đường em đã chọn.
           </p>
         </div>
 
-        <div class="wish-box">
-          <div class="wish-icon">🍓</div>
-          <div class="wish-box-title">Được Yêu Thương Mỗi Ngày</div>
-          <p class="wish-box-desc">
-            Không chỉ riêng 20/10, mà suốt 365 ngày trong năm, anh mong em luôn cảm nhận được sự ấm áp và chở che trọn vẹn nhất.
+        <div class="luxury-wish-card">
+          <div class="wish-icon-gold">🥂</div>
+          <div class="wish-heading">Trọn Vẹn Yêu Thương</div>
+          <p class="wish-text">
+            Không chỉ ngày 20/10 mà mọi khoảnh khắc trong cuộc đời, anh luôn mong em nhận được sự che chở và yêu chiều ngọt ngào nhất.
           </p>
         </div>
 
-        <div class="wish-box">
-          <div class="wish-icon">💑</div>
-          <div class="wish-box-title">Mãi Mãi Bên Nhau</div>
-          <p class="wish-box-desc">
-            Cảm ơn em vì đã đến bên anh, cùng anh chia sẻ từng khoảnh khắc ngọt ngào. Hãy cùng anh viết tiếp câu chuyện tình yêu dài lâu nhé!
+        <div class="luxury-wish-card">
+          <div class="wish-icon-gold">✨</div>
+          <div class="wish-heading">Vĩnh Cửu Bên Nhau</div>
+          <p class="wish-text">
+            Cảm ơn em đã là mảnh ghép hoàn hảo trong đời anh. Hãy cùng anh viết nên những trang tình yêu đẹp đẽ và sâu sắc nhất.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="romantic-footer">
-      <p>Thiết kế dành riêng cho ngày 20/10 với tất cả tấm lòng <span class="footer-heart">❤️</span></p>
+    <!-- Footer Hoàng Gia -->
+    <footer class="luxury-footer">
+      <p>Crafted with profound devotion for 20/10 <span class="gold-heart-icon">✦</span> Forever & Always</p>
     </footer>
 
   </main>
 
-  <!-- MODAL TÙY CHỈNH LỜI CHÚC & TÊN -->
-  <div class="edit-modal" id="edit-modal">
-    <div class="modal-dialog">
-      <h3 class="modal-title"><span>💌</span> Tùy Chỉnh Lời Chúc 20/10</h3>
+  <!-- MODAL TÙY CHỈNH LỜI CHÚC & TÊN BẠN GÁI -->
+  <div class="luxury-modal" id="edit-modal">
+    <div class="modal-box">
+      <h3 class="modal-head"><span>💌</span> Tùy Chỉnh Bức Thư Tình</h3>
       
-      <div class="form-group">
-        <label class="form-label" for="input-recipient">Tên người nhận (Bạn gái):</label>
-        <input type="text" id="input-recipient" class="form-input" placeholder="Ví dụ: Bé Heo, Công Chúa Của Anh, Mai Anh...">
+      <div class="modal-group">
+        <label class="field-label" for="input-recipient">Tên người nhận (Bạn gái):</label>
+        <input type="text" id="input-recipient" class="gold-input" placeholder="Ví dụ: Công Chúa Của Anh, Mai Anh, Em Yêu...">
       </div>
 
-      <div class="form-group">
-        <label class="form-label" for="input-message">Nội dung thư chúc mừng:</label>
-        <textarea id="input-message" class="form-textarea" placeholder="Nhập những lời yêu thương muốn gửi gắm..."></textarea>
+      <div class="modal-group">
+        <label class="field-label" for="input-message">Nội dung bức thư:</label>
+        <textarea id="input-message" class="gold-textarea" placeholder="Nhập những lời yêu thương muốn gửi gắm..."></textarea>
       </div>
 
-      <div class="form-group">
-        <label class="form-label" for="input-sender">Tên người gửi (Bạn):</label>
-        <input type="text" id="input-sender" class="form-input" placeholder="Ví dụ: Anh người yêu, Chàng ngốc của em...">
+      <div class="modal-group">
+        <label class="field-label" for="input-sender">Tên người gửi (Bạn):</label>
+        <input type="text" id="input-sender" class="gold-input" placeholder="Ví dụ: Anh người yêu, Chàng trai của em...">
       </div>
 
-      <div class="modal-actions">
-        <button class="btn-cancel" id="btn-cancel-edit">Hủy</button>
-        <button class="btn-save" id="btn-save-edit">Lưu & Hiển Thị ✨</button>
+      <div class="modal-btn-row">
+        <button class="btn-dark-cancel" id="btn-cancel-edit">Hủy</button>
+        <button class="btn-gold-save" id="btn-save-edit">Lưu Thay Đổi ✨</button>
       </div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT: Hiệu ứng Cánh hoa, Nhạc, Pháo hoa, Typewriter -->
+  <!-- JAVASCRIPT: Hiệu ứng hoàng gia, Cánh hoa trắng, Nhạc Piano, Typewriter -->
   <script>
     /* =====================================================================
-       1. CẤU HÌNH DỮ LIỆU & LỜI CHÚC MẶC ĐỊNH
+       1. CẤU HÌNH DỮ LIỆU & LỜI CHÚC SANG TRỌNG
        ===================================================================== */
     const DEFAULT_DATA = {
       recipient: "Em Yêu 💖",
       sender: "Anh của em ❤️",
-      message: `Nhân ngày Phụ nữ Việt Nam 20/10, anh muốn gửi tặng em những đóa hoa tươi thắm nhất cùng muôn vàn lời chúc ngọt ngào từ tận đáy lòng.
+      message: `Nhân ngày Phụ nữ Việt Nam 20/10, anh xin gửi tặng em những đóa hoa trắng tinh khôi nhất — biểu tượng cho vẻ đẹp thuần khiết, dịu dàng và thanh tao của em.
 
-Cảm ơn em đã xuất hiện trong cuộc đời anh, mang đến cho anh sự dịu dàng, nụ cười rạng rỡ và những khoảnh khắc ấm áp không gì sánh được.
+Cảm ơn em vì đã đến bên anh, mang lại những khoảnh khắc ấm áp và bình yên vô giá. Nụ cười của em chính là điều tuyệt mỹ nhất mà tạo hóa đã ban tặng cho cuộc đời anh.
 
-Chúc em yêu của anh ngày hôm nay và mãi về sau luôn luôn xinh đẹp, hạnh phúc, được nâng niu và yêu thương thật nhiều. Dù ngoài kia có giông bão thế nào, hãy nhớ rằng luôn có một bờ vai vững chãi ở đây đợi em.
+Chúc người con gái anh yêu một ngày 20/10 ngập tràn niềm vui, luôn rạng rỡ, kiêu hãnh và được nâng niu trọn vẹn. Dù thời gian có trôi đi, anh vẫn sẽ luôn ở đây, đồng hành và chở che cho em suốt chặng đường phía trước.
 
-Yêu em nhiều hơn mỗi ngày! 🌹✨`
+Trân quý và yêu em thật nhiều! 🤍✨`
     };
 
-    // Tải dữ liệu từ LocalStorage nếu có
     let appData = {
       recipient: localStorage.getItem('recipient_2010') || DEFAULT_DATA.recipient,
       sender: localStorage.getItem('sender_2010') || DEFAULT_DATA.sender,
@@ -1105,7 +1245,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     let heartsCount = parseInt(localStorage.getItem('hearts_count_2010') || '999', 10);
 
     /* =====================================================================
-       2. TYPEWRITER EFFECT CHO BỨC THƯ
+       2. TYPEWRITER HIỆU ỨNG GÕ CHỮ QUÝ TỘC
        ===================================================================== */
     const letterContentEl = document.getElementById('letter-content');
     const recipientNameEl = document.getElementById('display-recipient-name');
@@ -1121,24 +1261,22 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
       }
 
       if (!useAnimation) {
-        letterContentEl.innerHTML = appData.message.replace(/\n/g, '<br>') + '<span class="typing-cursor"></span>';
+        letterContentEl.innerHTML = appData.message.replace(/\n/g, '<br>') + '<span class="luxury-cursor"></span>';
         return;
       }
 
-      letterContentEl.innerHTML = '<span class="typing-cursor"></span>';
+      letterContentEl.innerHTML = '<span class="luxury-cursor"></span>';
       let index = 0;
-      const speed = 25; // Tốc độ gõ chữ (ms)
+      const speed = 28;
       const text = appData.message;
 
       function typeNextChar() {
         if (index < text.length) {
           const char = text.charAt(index);
           const currentHtml = text.substring(0, index + 1).replace(/\n/g, '<br>');
-          letterContentEl.innerHTML = currentHtml + '<span class="typing-cursor"></span>';
+          letterContentEl.innerHTML = currentHtml + '<span class="luxury-cursor"></span>';
           index++;
           typewriterTimeout = setTimeout(typeNextChar, char === '\n' ? speed * 6 : speed);
-        } else {
-          // Kết thúc gõ chữ, giữ con trỏ nhấp nháy một chút rồi ẩn hoặc giữ nguyên
         }
       }
 
@@ -1146,7 +1284,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     }
 
     /* =====================================================================
-       3. NHẠC NỀN DU DƯƠNG VỚI WEB AUDIO API (TỰ ĐỘNG CHẠY MƯỢT MÀ)
+       3. NHẠC PIANO DU DƯƠNG VỚI WEB AUDIO SYNTHESIZER
        ===================================================================== */
     class RomanticMusicSynth {
       constructor() {
@@ -1155,40 +1293,28 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         this.timer = null;
         this.noteIndex = 0;
 
-        // Giai điệu Canon in D / Romance piano nhẹ nhàng
+        // Giai điệu lãng mạn thanh thoát
         this.notes = [
-          { freq: 293.66, dur: 0.6 }, // D4
-          { freq: 369.99, dur: 0.6 }, // F#4
-          { freq: 440.00, dur: 0.6 }, // A4
-          { freq: 587.33, dur: 1.2 }, // D5
-          { freq: 220.00, dur: 0.6 }, // A3
-          { freq: 277.18, dur: 0.6 }, // C#4
-          { freq: 329.63, dur: 0.6 }, // E4
-          { freq: 440.00, dur: 1.2 }, // A4
-          { freq: 246.94, dur: 0.6 }, // B3
-          { freq: 293.66, dur: 0.6 }, // D4
-          { freq: 369.99, dur: 0.6 }, // F#4
-          { freq: 493.88, dur: 1.2 }, // B4
-          { freq: 185.00, dur: 0.6 }, // F#3
-          { freq: 220.00, dur: 0.6 }, // A3
-          { freq: 277.18, dur: 0.6 }, // C#4
-          { freq: 369.99, dur: 1.2 }, // F#4
-          { freq: 196.00, dur: 0.6 }, // G3
-          { freq: 246.94, dur: 0.6 }, // B3
-          { freq: 293.66, dur: 0.6 }, // D4
-          { freq: 392.00, dur: 1.2 }, // G4
-          { freq: 146.83, dur: 0.6 }, // D3
-          { freq: 220.00, dur: 0.6 }, // A3
-          { freq: 293.66, dur: 0.6 }, // D4
-          { freq: 369.99, dur: 1.2 }, // F#4
-          { freq: 196.00, dur: 0.6 }, // G3
-          { freq: 246.94, dur: 0.6 }, // B3
-          { freq: 293.66, dur: 0.6 }, // D4
-          { freq: 392.00, dur: 1.2 }, // G4
-          { freq: 220.00, dur: 0.6 }, // A3
-          { freq: 277.18, dur: 0.6 }, // C#4
-          { freq: 329.63, dur: 0.6 }, // E4
-          { freq: 440.00, dur: 1.2 }  // A4
+          { freq: 293.66, dur: 0.65 }, // D4
+          { freq: 369.99, dur: 0.65 }, // F#4
+          { freq: 440.00, dur: 0.65 }, // A4
+          { freq: 587.33, dur: 1.3 },  // D5
+          { freq: 220.00, dur: 0.65 }, // A3
+          { freq: 277.18, dur: 0.65 }, // C#4
+          { freq: 329.63, dur: 0.65 }, // E4
+          { freq: 440.00, dur: 1.3 },  // A4
+          { freq: 246.94, dur: 0.65 }, // B3
+          { freq: 293.66, dur: 0.65 }, // D4
+          { freq: 369.99, dur: 0.65 }, // F#4
+          { freq: 493.88, dur: 1.3 },  // B4
+          { freq: 185.00, dur: 0.65 }, // F#3
+          { freq: 220.00, dur: 0.65 }, // A3
+          { freq: 277.18, dur: 0.65 }, // C#4
+          { freq: 369.99, dur: 1.3 },  // F#4
+          { freq: 196.00, dur: 0.65 }, // G3
+          { freq: 246.94, dur: 0.65 }, // B3
+          { freq: 293.66, dur: 0.65 }, // D4
+          { freq: 392.00, dur: 1.3 }   // G4
         ];
       }
 
@@ -1208,22 +1334,19 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
 
-        // Âm sắc ấm áp như tiếng Rhodes / Music box
         osc.type = 'sine';
         osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
 
-        // Hòa âm nhẹ
         const osc2 = this.ctx.createOscillator();
         osc2.type = 'triangle';
         osc2.frequency.setValueAtTime(freq * 2, this.ctx.currentTime);
 
         const gain2 = this.ctx.createGain();
-        gain2.gain.setValueAtTime(0.08, this.ctx.currentTime);
+        gain2.gain.setValueAtTime(0.06, this.ctx.currentTime);
 
-        // Envelope mềm mại
         const now = this.ctx.currentTime;
         gain.gain.setValueAtTime(0.001, now);
-        gain.gain.exponentialRampToValueAtTime(0.2, now + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.18, now + 0.08);
         gain.gain.exponentialRampToValueAtTime(0.001, now + duration * 1.3);
 
         osc.connect(gain);
@@ -1246,14 +1369,12 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
 
       scheduleNext() {
         if (!this.isPlaying) return;
-
         const item = this.notes[this.noteIndex];
         this.playTone(item.freq, item.dur);
-
         this.noteIndex = (this.noteIndex + 1) % this.notes.length;
         this.timer = setTimeout(() => {
           this.scheduleNext();
-        }, item.dur * 600);
+        }, item.dur * 650);
       }
 
       stop() {
@@ -1287,13 +1408,12 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     });
 
     /* =====================================================================
-       4. CANVAS CÁNH HOA RƠI BỒNG BỀNH (CÁNH HOA TRẮNG & HOA HỒNG NGẬP TRÀN)
+       4. CANVAS CÁNH HOA TRẮNG NGỌC TRAI RƠI BỒNG BỀNH
        ===================================================================== */
     const petalsCanvas = document.getElementById('petals-canvas');
     const pCtx = petalsCanvas.getContext('2d');
-
     let petals = [];
-    const PETAL_COUNT = 55; // Tăng thêm nhiều hoa rơi ngập tràn không gian
+    const PETAL_COUNT = 60; // Dày dặn, ngập tràn hoa bay
 
     function resizePetalsCanvas() {
       petalsCanvas.width = window.innerWidth;
@@ -1310,22 +1430,22 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
       reset(init = false) {
         this.x = Math.random() * petalsCanvas.width;
         this.y = init ? Math.random() * petalsCanvas.height : -30;
-        this.size = 11 + Math.random() * 18;
-        this.speedY = 0.7 + Math.random() * 1.5;
-        this.speedX = (Math.random() - 0.5) * 1.4;
+        this.size = 11 + Math.random() * 19;
+        this.speedY = 0.7 + Math.random() * 1.4;
+        this.speedX = (Math.random() - 0.5) * 1.2;
         this.rotation = Math.random() * Math.PI * 2;
-        this.rotSpeed = (Math.random() - 0.5) * 0.035;
+        this.rotSpeed = (Math.random() - 0.5) * 0.03;
         this.swing = Math.random() * Math.PI * 2;
         this.swingSpeed = 0.02 + Math.random() * 0.03;
-        this.opacity = 0.7 + Math.random() * 0.3;
-        // 0: Trắng tinh khôi / ngọc trai (nhiều hơn), 1: Trắng ánh hồng baby, 2: Hồng phấn, 3: Đỏ thắm
-        this.colorType = Math.floor(Math.random() * 5); 
+        this.opacity = 0.75 + Math.random() * 0.25;
+        // 0,1,2: Trắng tinh khôi / ngọc trai / ánh champagne, 3: Phớt hồng dịu dàng
+        this.colorType = Math.floor(Math.random() * 4);
       }
 
       update() {
         this.y += this.speedY;
         this.swing += this.swingSpeed;
-        this.x += this.speedX + Math.sin(this.swing) * 0.9;
+        this.x += this.speedX + Math.sin(this.swing) * 0.8;
         this.rotation += this.rotSpeed;
 
         if (this.y > petalsCanvas.height + 40 || this.x < -40 || this.x > petalsCanvas.width + 40) {
@@ -1339,25 +1459,22 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         pCtx.rotate(this.rotation);
         pCtx.globalAlpha = this.opacity;
 
-        let col1 = '#ffffff', col2 = '#f8fafc', strokeCol = 'rgba(255,255,255,0.8)';
-        if (this.colorType === 0 || this.colorType === 1) {
-          // Hoa trắng tinh khôi & ngọc trai
+        let col1 = '#ffffff', col2 = '#fef0cd', strokeCol = 'rgba(254, 240, 205, 0.6)';
+        if (this.colorType === 0) {
           col1 = '#ffffff';
-          col2 = '#fff0f5';
-          strokeCol = 'rgba(255, 230, 238, 0.6)';
+          col2 = '#fcf6ba';
+        } else if (this.colorType === 1) {
+          col1 = '#ffffff';
+          col2 = '#fff5f7';
+          strokeCol = 'rgba(255, 255, 255, 0.7)';
         } else if (this.colorType === 2) {
-          // Trắng pha hồng phớt
+          col1 = '#fbf5b7';
+          col2 = '#dfba73';
+          strokeCol = 'rgba(223, 186, 115, 0.4)';
+        } else {
           col1 = '#ffffff';
           col2 = '#ffd1dc';
-          strokeCol = 'rgba(255, 182, 193, 0.5)';
-        } else if (this.colorType === 3) {
-          // Hồng phấn
-          col1 = '#ffa8ba';
-          col2 = '#ff6584';
-        } else {
-          // Đỏ nhung
-          col1 = '#e63946';
-          col2 = '#b7094c';
+          strokeCol = 'rgba(255, 209, 220, 0.5)';
         }
 
         const grad = pCtx.createLinearGradient(-this.size/2, -this.size/2, this.size/2, this.size/2);
@@ -1365,18 +1482,15 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         grad.addColorStop(1, col2);
 
         pCtx.fillStyle = grad;
-        if (strokeCol) {
-          pCtx.strokeStyle = strokeCol;
-          pCtx.lineWidth = 0.8;
-        }
+        pCtx.strokeStyle = strokeCol;
+        pCtx.lineWidth = 0.7;
 
         pCtx.beginPath();
-        // Vẽ cánh hoa hình giọt nước/trái tim mềm
         pCtx.moveTo(0, -this.size);
         pCtx.bezierCurveTo(this.size * 0.85, -this.size * 0.65, this.size * 0.85, this.size * 0.5, 0, this.size);
         pCtx.bezierCurveTo(-this.size * 0.85, this.size * 0.5, -this.size * 0.85, -this.size * 0.65, 0, -this.size);
         pCtx.fill();
-        if (strokeCol) pCtx.stroke();
+        pCtx.stroke();
 
         pCtx.restore();
       }
@@ -1397,12 +1511,12 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     animatePetals();
 
     /* =====================================================================
-       5. CANVAS HẠT BỤI TIÊN LẤP LÁNH (FAIRY LIGHT SPARKLES)
+       5. CANVAS HẠT BỤI VÀNG ÁNH KIM (GOLDEN STARDUST PARTICLES)
        ===================================================================== */
     const sparklesCanvas = document.getElementById('sparkles-canvas');
     const sCtx = sparklesCanvas.getContext('2d');
     let sparkles = [];
-    const SPARKLE_COUNT = 45;
+    const SPARKLE_COUNT = 55;
 
     function resizeSparklesCanvas() {
       sparklesCanvas.width = window.innerWidth;
@@ -1419,13 +1533,12 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
       reset(init = false) {
         this.x = Math.random() * sparklesCanvas.width;
         this.y = init ? Math.random() * sparklesCanvas.height : sparklesCanvas.height + 10;
-        this.radius = 1 + Math.random() * 2.5;
-        this.speedY = -(0.3 + Math.random() * 0.7);
-        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.radius = 0.8 + Math.random() * 2.2;
+        this.speedY = -(0.25 + Math.random() * 0.6);
+        this.speedX = (Math.random() - 0.5) * 0.4;
         this.alpha = 0.1;
         this.targetAlpha = 0.3 + Math.random() * 0.7;
         this.fading = false;
-        this.color = Math.random() > 0.4 ? 'rgba(255, 235, 150,' : 'rgba(255, 192, 203,';
       }
 
       update() {
@@ -1447,9 +1560,9 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         sCtx.save();
         sCtx.beginPath();
         sCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        sCtx.fillStyle = this.color + this.alpha + ')';
-        sCtx.shadowBlur = 10;
-        sCtx.shadowColor = '#fcd34d';
+        sCtx.fillStyle = `rgba(252, 246, 186, ${this.alpha})`;
+        sCtx.shadowBlur = 8;
+        sCtx.shadowColor = '#dfba73';
         sCtx.fill();
         sCtx.restore();
       }
@@ -1470,7 +1583,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     animateSparkles();
 
     /* =====================================================================
-       6. CANVAS PHÁO HOA TRÁI TIM KHI MỞ QUÀ & CLICK
+       6. CANVAS PHÁO HOA TRÁI TIM VÀNG HOÀNG GIA (GOLDEN FIREWORKS)
        ===================================================================== */
     const fireworksCanvas = document.getElementById('fireworks-canvas');
     const fCtx = fireworksCanvas.getContext('2d');
@@ -1484,16 +1597,15 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     resizeFireworksCanvas();
 
     function triggerHeartFireworks(originX, originY) {
-      const colors = ['#ff4d6d', '#ff758c', '#ffd166', '#f72585', '#7209b7', '#ffffff'];
-      const total = 75;
+      const colors = ['#dfba73', '#fef0cd', '#ffffff', '#e27396', '#bf953f'];
+      const total = 80;
 
       for (let i = 0; i < total; i++) {
-        // Công thức hình trái tim tham số
         const t = Math.PI * 2 * (i / total);
         const heartX = 16 * Math.pow(Math.sin(t), 3);
         const heartY = -(13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
 
-        const speedMultiplier = 0.25 + Math.random() * 0.15;
+        const speedMultiplier = 0.28 + Math.random() * 0.16;
         fwParticles.push({
           x: originX,
           y: originY,
@@ -1501,7 +1613,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
           vy: heartY * speedMultiplier + (Math.random() - 0.5) * 1.5,
           color: colors[Math.floor(Math.random() * colors.length)],
           alpha: 1,
-          size: 3 + Math.random() * 3,
+          size: 2.5 + Math.random() * 3,
           decay: 0.012 + Math.random() * 0.01
         });
       }
@@ -1514,7 +1626,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         const p = fwParticles[i];
         p.x += p.vx;
         p.y += p.vy;
-        p.vy += 0.04; // Trọng lực nhẹ
+        p.vy += 0.035;
         p.alpha -= p.decay;
 
         if (p.alpha <= 0) {
@@ -1525,6 +1637,8 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
         fCtx.save();
         fCtx.globalAlpha = p.alpha;
         fCtx.fillStyle = p.color;
+        fCtx.shadowBlur = 10;
+        fCtx.shadowColor = p.color;
         fCtx.beginPath();
         fCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         fCtx.fill();
@@ -1536,7 +1650,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     animateFireworks();
 
     /* =====================================================================
-       7. MỞ QUÀ & TƯƠNG TÁC CHÍNH
+       7. MỞ THƯ & KÍCH HOẠT HIỆU ỨNG
        ===================================================================== */
     const introScreen = document.getElementById('intro-screen');
     const openGiftBtn = document.getElementById('open-gift-btn');
@@ -1546,27 +1660,64 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
       const x = rect.left + rect.width / 2;
       const y = rect.top + rect.height / 2;
 
-      // Kích hoạt pháo hoa trái tim hoành tráng
       triggerHeartFireworks(x, y);
-      setTimeout(() => triggerHeartFireworks(x - 80, y - 60), 200);
-      setTimeout(() => triggerHeartFireworks(x + 80, y - 60), 400);
+      setTimeout(() => triggerHeartFireworks(x - 90, y - 60), 200);
+      setTimeout(() => triggerHeartFireworks(x + 90, y - 60), 400);
 
-      // Bật nhạc du dương
       if (!musicSynth.isPlaying) {
         musicSynth.start();
         audioToggleBtn.classList.add('playing');
         audioToggleBtn.textContent = '🔊';
       }
 
-      // Ẩn màn hình mở quà và bắt đầu gõ thư
       introScreen.classList.add('hidden');
       setTimeout(() => {
         renderLetter(true);
-      }, 600);
+      }, 700);
     });
 
     /* =====================================================================
-       8. HIỆU ỨNG THẢ TIM LIÊN TỤC (HEART BURST)
+       8. CHUYỂN ĐỔI BỘ HOA TRẮNG & HOA HỒNG
+       ===================================================================== */
+    const flowerImgEl = document.getElementById('flower-img');
+    const flowerTitleText = document.getElementById('flower-title-text');
+    const flowerBadgeText = document.getElementById('flower-badge-text');
+    const flowerQuoteText = document.getElementById('flower-quote-text');
+    const btnThemeWhite = document.getElementById('btn-theme-white');
+    const btnThemeRose = document.getElementById('btn-theme-rose');
+
+    function switchFlowerTheme(theme) {
+      flowerImgEl.style.opacity = '0.3';
+      flowerImgEl.style.transform = 'scale(0.97)';
+
+      setTimeout(() => {
+        if (theme === 'white') {
+          flowerImgEl.src = 'white_bouquet.jpg';
+          flowerTitleText.textContent = 'Bình Hoa Trắng Tinh Khôi';
+          flowerBadgeText.textContent = 'Haute Couture Floral';
+          flowerQuoteText.textContent = '"Giữa ngàn vạn đóa hoa khoe sắc ngoài kia, em tựa như những đóa hoa trắng tinh khôi nhất — kiêu sa, thuần khiết và thắp sáng cả thế giới của anh."';
+          
+          btnThemeWhite.classList.add('active');
+          btnThemeRose.classList.remove('active');
+        } else {
+          flowerImgEl.src = 'bouquet.jpg';
+          flowerTitleText.textContent = 'Bó Hoa Tình Yêu Rực Rỡ';
+          flowerBadgeText.textContent = 'Passionate Romance';
+          flowerQuoteText.textContent = '"Có ngàn vạn đóa hoa khoe sắc ngoài kia, nhưng bông hoa xinh đẹp, ngọt ngào và rạng ngời nhất trong tim anh luôn luôn là em."';
+
+          btnThemeRose.classList.add('active');
+          btnThemeWhite.classList.remove('active');
+        }
+        flowerImgEl.style.opacity = '1';
+        flowerImgEl.style.transform = '';
+      }, 250);
+    }
+
+    btnThemeWhite.addEventListener('click', () => switchFlowerTheme('white'));
+    btnThemeRose.addEventListener('click', () => switchFlowerTheme('rose'));
+
+    /* =====================================================================
+       9. THẢ TIM PHÁT SÁNG & ĐẾM TIM
        ===================================================================== */
     const heartBlastBtn = document.getElementById('heart-blast-btn');
     const heartCountEl = document.getElementById('heart-count');
@@ -1577,44 +1728,38 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
       heartCountEl.textContent = heartsCount;
       localStorage.setItem('hearts_count_2010', heartsCount);
 
-      // Tạo chuỗi tim bay lên
       const rect = heartBlastBtn.getBoundingClientRect();
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 7; i++) {
         setTimeout(() => {
-          createFloatingHeart(
-            rect.left + rect.width / 2 + (Math.random() - 0.5) * 60,
+          createSparkleHeart(
+            rect.left + rect.width / 2 + (Math.random() - 0.5) * 70,
             rect.top + rect.height / 2
           );
-        }, i * 60);
+        }, i * 50);
       }
-
-      // Rung nhẹ nút
-      heartBlastBtn.style.transform = 'scale(0.95)';
-      setTimeout(() => { heartBlastBtn.style.transform = ''; }, 150);
     });
 
-    // Bấm chuột bất kỳ trên trang để thả trái tim nhỏ
     document.addEventListener('pointerdown', (e) => {
       if (e.target.closest('button') || e.target.closest('input') || e.target.closest('textarea')) return;
-      createFloatingHeart(e.clientX, e.clientY);
+      createSparkleHeart(e.clientX, e.clientY);
     });
 
-    function createFloatingHeart(x, y) {
-      const heartEmojis = ['💖', '💕', '🌸', '🌹', '❤️', '✨', '💐'];
+    function createSparkleHeart(x, y) {
+      const items = ['🤍', '✨', '✦', '🌹', '💖', '💎'];
       const el = document.createElement('div');
-      el.className = 'click-heart';
-      el.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+      el.className = 'sparkle-heart';
+      el.textContent = items[Math.floor(Math.random() * items.length)];
       el.style.left = x + 'px';
       el.style.top = y + 'px';
-      el.style.setProperty('--rand-x', (Math.random() * 80 - 40) + 'px');
+      el.style.setProperty('--rand-x', (Math.random() * 90 - 45) + 'px');
       el.style.setProperty('--rand-rot', (Math.random() * 40 - 20) + 'deg');
 
       document.body.appendChild(el);
-      setTimeout(() => el.remove(), 1600);
+      setTimeout(() => el.remove(), 1800);
     }
 
     /* =====================================================================
-       9. TÙY CHỈNH LỜI CHÚC & TÊN BẠN GÁI
+       10. TÙY CHỈNH LỜI CHÚC & TÊN BẠN GÁI
        ===================================================================== */
     const editModal = document.getElementById('edit-modal');
     const editLetterBtn = document.getElementById('edit-letter-btn');
@@ -1668,67 +1813,17 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     });
 
     /* =====================================================================
-       10. CHUYỂN ĐỔI BỘ HOA TRẮNG & HOA HỒNG TỰ DO
+       11. HIỆU ỨNG TILT 3D KHI DI CHUỘT
        ===================================================================== */
-    const flowerImgEl = document.getElementById('flower-img');
-    const flowerTitleText = document.getElementById('flower-title-text');
-    const flowerBadgeText = document.getElementById('flower-badge-text');
-    const flowerQuoteText = document.getElementById('flower-quote-text');
-    const btnThemeWhite = document.getElementById('btn-theme-white');
-    const btnThemeRose = document.getElementById('btn-theme-rose');
-
-    function switchFlowerTheme(theme) {
-      flowerImgEl.style.opacity = '0.4';
-      flowerImgEl.style.transform = 'scale(0.96)';
-
-      setTimeout(() => {
-        if (theme === 'white') {
-          flowerImgEl.src = 'white_bouquet.jpg';
-          flowerTitleText.textContent = 'Bình Hoa Trắng Tinh Khôi';
-          flowerBadgeText.textContent = 'Thuần Khiết & Dịu Dàng ✨';
-          flowerQuoteText.textContent = '"Có ngàn vạn đóa hoa khoe sắc ngoài kia, nhưng với anh, em tựa như những đóa hoa trắng tinh khôi nhất — dịu dàng, thanh khiết và rạng ngời trong trái tim anh."';
-          
-          btnThemeWhite.style.background = '#ffffff';
-          btnThemeWhite.style.fontWeight = '700';
-          btnThemeWhite.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
-          btnThemeRose.style.background = '#fff0f3';
-          btnThemeRose.style.fontWeight = '400';
-          btnThemeRose.style.boxShadow = 'none';
-        } else {
-          flowerImgEl.src = 'bouquet.jpg';
-          flowerTitleText.textContent = 'Bó Hoa Tình Yêu Rực Rỡ';
-          flowerBadgeText.textContent = 'Say Đắm & Nồng Nàn 🌹';
-          flowerQuoteText.textContent = '"Có ngàn vạn đóa hoa khoe sắc ngoài kia, nhưng bông hoa xinh đẹp, ngọt ngào và rạng ngời nhất trong tim anh luôn luôn là em."';
-
-          btnThemeRose.style.background = '#ffffff';
-          btnThemeRose.style.fontWeight = '700';
-          btnThemeRose.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
-          btnThemeWhite.style.background = '#fff0f3';
-          btnThemeWhite.style.fontWeight = '400';
-          btnThemeWhite.style.boxShadow = 'none';
-        }
-        flowerImgEl.style.opacity = '1';
-        flowerImgEl.style.transform = '';
-      }, 250);
-    }
-
-    if (btnThemeWhite && btnThemeRose) {
-      btnThemeWhite.addEventListener('click', () => switchFlowerTheme('white'));
-      btnThemeRose.addEventListener('click', () => switchFlowerTheme('rose'));
-    }
-
-    /* =====================================================================
-       11. HIỆU ỨNG TILT 3D KHI DI CHUỘT TRÊN CARD HOA
-       ===================================================================== */
-    const flowerCard = document.querySelector('.flower-card');
+    const flowerCard = document.querySelector('.flower-luxury-card');
     if (window.matchMedia("(hover: hover)").matches) {
       flowerCard.addEventListener('mousemove', (e) => {
         const rect = flowerCard.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
-        const tiltX = (y / rect.height) * -8;
-        const tiltY = (x / rect.width) * 8;
-        flowerCard.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-4px)`;
+        const tiltX = (y / rect.height) * -6;
+        const tiltY = (x / rect.width) * 6;
+        flowerCard.style.transform = `perspective(1200px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px)`;
       });
 
       flowerCard.addEventListener('mouseleave', () => {
@@ -1737,7 +1832,7 @@ Yêu em nhiều hơn mỗi ngày! 🌹✨`
     }
 
     /* =====================================================================
-       11. TOÀN MÀN HÌNH (FULLSCREEN)
+       12. TOÀN MÀN HÌNH (FULLSCREEN)
        ===================================================================== */
     const fullscreenBtn = document.getElementById('fullscreen-btn');
     fullscreenBtn.addEventListener('click', () => {
