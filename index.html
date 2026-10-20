@@ -664,7 +664,7 @@
 
     .salutation-line {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
+      font-size: 1.85rem;
       font-weight: 600;
       color: var(--gold-light);
       margin-bottom: 24px;
@@ -673,18 +673,10 @@
       gap: 10px;
     }
 
-    .gold-editable-name {
+    .salutation-name {
       color: #fff2cc;
-      border-bottom: 1.5px dashed var(--gold-primary);
-      padding: 0 6px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .gold-editable-name:hover {
-      background: rgba(223, 186, 115, 0.15);
-      border-radius: 4px;
-      text-shadow: 0 0 10px rgba(223, 186, 115, 0.6);
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(223, 186, 115, 0.4);
     }
 
     .letter-body-text {
@@ -1086,7 +1078,7 @@
               🤍 Hoa Trắng Tinh Khôi
             </button>
             <button class="tab-btn" id="btn-theme-rose">
-              🌹 Hoa Hồng Rực Rỡ
+              🌸 Hoa Hồng Sophia
             </button>
           </div>
 
@@ -1120,7 +1112,7 @@
 
         <div class="salutation-line">
           <span>Kính gửi:</span>
-          <span class="gold-editable-name" id="display-recipient-name" title="Bấm vào để đổi tên bạn gái">Em Yêu 💖</span>
+          <span class="salutation-name" id="display-recipient-name">Em Yêu 💖</span>
         </div>
 
         <div class="letter-body-text" id="letter-content">
@@ -1134,10 +1126,7 @@
 
         <div class="bottom-letter-tools">
           <button class="outline-gold-btn" id="replay-typewriter-btn" title="Gõ lại từng nét thư">
-            <span>✍️ Đọc Lại Thư</span>
-          </button>
-          <button class="outline-gold-btn" id="edit-letter-btn" title="Chỉnh sửa tên và lời chúc">
-            <span>✏️ Tùy Chỉnh Lời Chúc</span>
+            <span>✍️ Đọc Lại Bức Thư</span>
           </button>
         </div>
       </article>
@@ -1192,54 +1181,29 @@
 
   </main>
 
-  <!-- MODAL TÙY CHỈNH LỜI CHÚC & TÊN BẠN GÁI -->
-  <div class="luxury-modal" id="edit-modal">
-    <div class="modal-box">
-      <h3 class="modal-head"><span>💌</span> Tùy Chỉnh Bức Thư Tình</h3>
-      
-      <div class="modal-group">
-        <label class="field-label" for="input-recipient">Tên người nhận (Bạn gái):</label>
-        <input type="text" id="input-recipient" class="gold-input" placeholder="Ví dụ: Công Chúa Của Anh, Mai Anh, Em Yêu...">
-      </div>
-
-      <div class="modal-group">
-        <label class="field-label" for="input-message">Nội dung bức thư:</label>
-        <textarea id="input-message" class="gold-textarea" placeholder="Nhập những lời yêu thương muốn gửi gắm..."></textarea>
-      </div>
-
-      <div class="modal-group">
-        <label class="field-label" for="input-sender">Tên người gửi (Bạn):</label>
-        <input type="text" id="input-sender" class="gold-input" placeholder="Ví dụ: Anh người yêu, Chàng trai của em...">
-      </div>
-
-      <div class="modal-btn-row">
-        <button class="btn-dark-cancel" id="btn-cancel-edit">Hủy</button>
-        <button class="btn-gold-save" id="btn-save-edit">Lưu Thay Đổi ✨</button>
-      </div>
-    </div>
-  </div>
-
   <!-- JAVASCRIPT: Hiệu ứng hoàng gia, Cánh hoa trắng, Nhạc Piano, Typewriter -->
   <script>
     /* =====================================================================
-       1. CẤU HÌNH DỮ LIỆU & LỜI CHÚC SANG TRỌNG
+       1. CẤU HÌNH DỮ LIỆU & LỜI CHÚC Ý NGHĨA
        ===================================================================== */
     const DEFAULT_DATA = {
       recipient: "Em Yêu 💖",
       sender: "Anh của em ❤️",
-      message: `Nhân ngày Phụ nữ Việt Nam 20/10, anh xin gửi tặng em những đóa hoa trắng tinh khôi nhất — biểu tượng cho vẻ đẹp thuần khiết, dịu dàng và thanh tao của em.
+      message: `Gửi người con gái anh thương,
 
-Cảm ơn em vì đã đến bên anh, mang lại những khoảnh khắc ấm áp và bình yên vô giá. Nụ cười của em chính là điều tuyệt mỹ nhất mà tạo hóa đã ban tặng cho cuộc đời anh.
+Nhân ngày Phụ nữ Việt Nam 20/10, anh muốn dành tặng em những đóa hoa tươi thắm và rực rỡ nhất, cùng tất cả sự trân quý từ tận đáy lòng.
 
-Chúc người con gái anh yêu một ngày 20/10 ngập tràn niềm vui, luôn rạng rỡ, kiêu hãnh và được nâng niu trọn vẹn. Dù thời gian có trôi đi, anh vẫn sẽ luôn ở đây, đồng hành và chở che cho em suốt chặng đường phía trước.
+Cảm ơn em vì đã xuất hiện trong cuộc đời anh, mang theo sự dịu dàng, ấm áp và nụ cười thắp sáng cả thế giới của anh. Ở bên em, anh hiểu rằng hạnh phúc đôi khi thật giản đơn — là được nhìn thấy em an yên mỗi ngày, được lắng nghe em chia sẻ và có em cùng đồng hành qua mọi khoảnh khắc.
 
-Trân quý và yêu em thật nhiều! 🤍✨`
+Chúc cô gái của anh ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp, tự tin, kiêu hãnh và rực rỡ như những đóa hoa đang bung nở. Mong em luôn giữ được nụ cười tỏa nắng ấy. Hãy nhớ rằng, dù cuộc sống ngoài kia có bao thăng trầm, vẫn luôn có một bờ vai vững vàng ở đây đợi em, sẵn sàng chở che và yêu thương em vô điều kiện.
+
+Cảm ơn em vì đã luôn là điều tuyệt vời nhất trong đời anh! 🌹✨`
     };
 
     let appData = {
-      recipient: localStorage.getItem('recipient_2010') || DEFAULT_DATA.recipient,
-      sender: localStorage.getItem('sender_2010') || DEFAULT_DATA.sender,
-      message: localStorage.getItem('message_2010') || DEFAULT_DATA.message
+      recipient: DEFAULT_DATA.recipient,
+      sender: DEFAULT_DATA.sender,
+      message: DEFAULT_DATA.message
     };
 
     let heartsCount = parseInt(localStorage.getItem('hearts_count_2010') || '999', 10);
@@ -1700,10 +1664,10 @@ Trân quý và yêu em thật nhiều! 🤍✨`
           btnThemeWhite.classList.add('active');
           btnThemeRose.classList.remove('active');
         } else {
-          flowerImgEl.src = 'bouquet.jpg';
-          flowerTitleText.textContent = 'Bó Hoa Tình Yêu Rực Rỡ';
-          flowerBadgeText.textContent = 'Passionate Romance';
-          flowerQuoteText.textContent = '"Có ngàn vạn đóa hoa khoe sắc ngoài kia, nhưng bông hoa xinh đẹp, ngọt ngào và rạng ngời nhất trong tim anh luôn luôn là em."';
+          flowerImgEl.src = 'sophia_roses.jpg';
+          flowerTitleText.textContent = 'Bình Hoa Hồng Tươi Sophia';
+          flowerBadgeText.textContent = 'Royal Sophia Rose';
+          flowerQuoteText.textContent = '"Từng cánh hoa hồng Sophia xoáy cúp mềm mại tựa như sự dịu dàng và nét kiêu sa duy nhất của em trong trái tim anh."';
 
           btnThemeRose.classList.add('active');
           btnThemeWhite.classList.remove('active');
@@ -1745,7 +1709,7 @@ Trân quý và yêu em thật nhiều! 🤍✨`
     });
 
     function createSparkleHeart(x, y) {
-      const items = ['🤍', '✨', '✦', '🌹', '💖', '💎'];
+      const items = ['🤍', '✨', '✦', '🌸', '💖', '💎'];
       const el = document.createElement('div');
       el.className = 'sparkle-heart';
       el.textContent = items[Math.floor(Math.random() * items.length)];
@@ -1759,58 +1723,14 @@ Trân quý và yêu em thật nhiều! 🤍✨`
     }
 
     /* =====================================================================
-       10. TÙY CHỈNH LỜI CHÚC & TÊN BẠN GÁI
+       10. ĐỌC LẠI BỨC THƯ
        ===================================================================== */
-    const editModal = document.getElementById('edit-modal');
-    const editLetterBtn = document.getElementById('edit-letter-btn');
     const replayTypewriterBtn = document.getElementById('replay-typewriter-btn');
-    const btnCancelEdit = document.getElementById('btn-cancel-edit');
-    const btnSaveEdit = document.getElementById('btn-save-edit');
-
-    const inputRecipient = document.getElementById('input-recipient');
-    const inputMessage = document.getElementById('input-message');
-    const inputSender = document.getElementById('input-sender');
-
-    function openEditModal() {
-      inputRecipient.value = appData.recipient;
-      inputMessage.value = appData.message;
-      inputSender.value = appData.sender;
-      editModal.classList.add('active');
+    if (replayTypewriterBtn) {
+      replayTypewriterBtn.addEventListener('click', () => {
+        renderLetter(true);
+      });
     }
-
-    function closeEditModal() {
-      editModal.classList.remove('active');
-    }
-
-    recipientNameEl.addEventListener('click', openEditModal);
-    editLetterBtn.addEventListener('click', openEditModal);
-    btnCancelEdit.addEventListener('click', closeEditModal);
-
-    editModal.addEventListener('click', (e) => {
-      if (e.target === editModal) closeEditModal();
-    });
-
-    btnSaveEdit.addEventListener('click', () => {
-      const newRecipient = inputRecipient.value.trim() || DEFAULT_DATA.recipient;
-      const newMessage = inputMessage.value.trim() || DEFAULT_DATA.message;
-      const newSender = inputSender.value.trim() || DEFAULT_DATA.sender;
-
-      appData.recipient = newRecipient;
-      appData.message = newMessage;
-      appData.sender = newSender;
-
-      localStorage.setItem('recipient_2010', newRecipient);
-      localStorage.setItem('message_2010', newMessage);
-      localStorage.setItem('sender_2010', newSender);
-
-      closeEditModal();
-      renderLetter(true);
-      triggerHeartFireworks(window.innerWidth / 2, window.innerHeight / 2);
-    });
-
-    replayTypewriterBtn.addEventListener('click', () => {
-      renderLetter(true);
-    });
 
     /* =====================================================================
        11. HIỆU ỨNG TILT 3D KHI DI CHUỘT
